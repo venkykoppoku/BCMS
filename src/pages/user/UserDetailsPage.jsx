@@ -34,24 +34,69 @@ export const postUser = (values) =>
 const getUsers = () => [
     {
         id: '1',
-        email: 'venky@gmail.com',
-        password: '12345',
-        emailConfirmed: true,
-        role: 'Admin',
+        unit: 'STGPW',
+        typeOfProject: 'Retail',
+        noOfKeyResourcesNeeded:3,
+        noOfPcsRequired:3,
+        projectSpecificSoftwareRequired:"no",
+        servicePriority:"no",
+        recoveryTimelines:"no",
+        primaryLocation:"Hyderabad",
+        relocationLocation:"Chennai",
+        primaryBuilding:"B2",
+        relocationBuilding:"B2",
+        keyContact:"9398491296",
+        backupKeyContact:"9848012328",
+        remarks:"location change",
+        dataReviewedBy:"",
+        shiftStartTime:"",
+        isWorkFromHomeAvl:false,
+        eccAccomadationNeeded:false,
+        transportRequirements:""
     },
     {
         id: '2',
-        email: 'venky@gmail.com',
-        password: '12345',
-        emailConfirmed: true,
-        role: 'Admin',
+        unit: 'STGPW',
+        typeOfProject: 'Retail',
+        noOfKeyResourcesNeeded:3,
+        noOfPcsRequired:3,
+        projectSpecificSoftwareRequired:"no",
+        servicePriority:"no",
+        recoveryTimelines:"no",
+        primaryLocation:"Hyderabad",
+        relocationLocation:"Chennai",
+        primaryBuilding:"B2",
+        relocationBuilding:"B2",
+        keyContact:"9398491296",
+        backupKeyContact:"9848012328",
+        remarks:"location change",
+        dataReviewedBy:"",
+        shiftStartTime:"",
+        isWorkFromHomeAvl:false,
+        eccAccomadationNeeded:false,
+        transportRequirements:""
     },
     {
         id: '3',
-        email: 'venky@gmail.com',
-        password: '12345',
-        emailConfirmed: true,
-        role: 'Admin',
+        unit: 'STGPW',
+        typeOfProject: 'Retail',
+        noOfKeyResourcesNeeded:3,
+        noOfPcsRequired:3,
+        projectSpecificSoftwareRequired:"no",
+        servicePriority:"no",
+        recoveryTimelines:"no",
+        primaryLocation:"Hyderabad",
+        relocationLocation:"Chennai",
+        primaryBuilding:"B2",
+        relocationBuilding:"B2",
+        keyContact:"9398491296",
+        backupKeyContact:"9848012328",
+        remarks:"location change",
+        dataReviewedBy:"",
+        shiftStartTime:"",
+        isWorkFromHomeAvl:false,
+        eccAccomadationNeeded:false,
+        transportRequirements:""
     }
 ]
 
@@ -100,14 +145,73 @@ export const deleteBatchById = (userId) =>
 
 
 
-export const userDetailValues = [
+export const userDetailValues =[
     {
-        id: '',
-        email: '',
-        password: '',
-        emailConfirmed: true,
-        role: '',
+        id: '1',
+        unit: 'STGPW',
+        typeOfProject: 'Retail',
+        noOfKeyResourcesNeeded:3,
+        noOfPcsRequired:3,
+        projectSpecificSoftwareRequired:"no",
+        servicePriority:"no",
+        recoveryTimelines:"no",
+        primaryLocation:"Hyderabad",
+        relocationLocation:"Chennai",
+        primaryBuilding:"B2",
+        relocationBuilding:"B2",
+        keyContact:"9398491296",
+        backupKeyContact:"9848012328",
+        remarks:"location change",
+        dataReviewedBy:"",
+        shiftStartTime:"",
+        isWorkFromHomeAvl:false,
+        eccAccomadationNeeded:false,
+        transportRequirements:""
     },
+    {
+        id: '2',
+        unit: 'STGPW',
+        typeOfProject: 'Retail',
+        noOfKeyResourcesNeeded:3,
+        noOfPcsRequired:3,
+        projectSpecificSoftwareRequired:"no",
+        servicePriority:"no",
+        recoveryTimelines:"no",
+        primaryLocation:"Hyderabad",
+        relocationLocation:"Chennai",
+        primaryBuilding:"B2",
+        relocationBuilding:"B2",
+        keyContact:"9398491296",
+        backupKeyContact:"9848012328",
+        remarks:"location change",
+        dataReviewedBy:"",
+        shiftStartTime:"",
+        isWorkFromHomeAvl:false,
+        eccAccomadationNeeded:false,
+        transportRequirements:""
+    },
+    {
+        id: '3',
+        unit: 'STGPW',
+        typeOfProject: 'Retail',
+        noOfKeyResourcesNeeded:3,
+        noOfPcsRequired:3,
+        projectSpecificSoftwareRequired:"no",
+        servicePriority:"no",
+        recoveryTimelines:"no",
+        primaryLocation:"Hyderabad",
+        relocationLocation:"Chennai",
+        primaryBuilding:"B2",
+        relocationBuilding:"B2",
+        keyContact:"9398491296",
+        backupKeyContact:"9848012328",
+        remarks:"location change",
+        dataReviewedBy:"",
+        shiftStartTime:"",
+        isWorkFromHomeAvl:false,
+        eccAccomadationNeeded:false,
+        transportRequirements:""
+    }
 ]
 
 
@@ -117,18 +221,47 @@ export class UsersPage extends React.Component {
         this.state = {
             users: userDetailValues,
             addUserData: {
-                email: '',
-                password: '',
-                emailConfirmed: true,
-                roles: [''],
-                role: '',
+               unit: '',
+                typeOfProject: '',
+                noOfKeyResourcesNeeded:0,
+                noOfPcsRequired:0,
+                projectSpecificSoftwareRequired:"",
+                servicePriority:"",
+                recoveryTimelines:"",
+                primaryLocation:"",
+                relocationLocation:"",
+                primaryBuilding:"",
+                relocationBuilding:"",
+                keyContact:"",
+                backupKeyContact:"",
+                remarks:"",
+                dataReviewedBy:"",
+                shiftStartTime:"",
+                isWorkFromHomeAvl:false,
+                eccAccomadationNeeded:false,
+                transportRequirements:""
             },
             editUserData: {
-                email: '',
-                password: '',
-                emailConfirmed: true,
-                roles: [''],
-                role: '',
+               
+        unit: '',
+        typeOfProject: '',
+        noOfKeyResourcesNeeded:0,
+        noOfPcsRequired:0,
+        projectSpecificSoftwareRequired:"",
+        servicePriority:"",
+        recoveryTimelines:"",
+        primaryLocation:"",
+        relocationLocation:"",
+        primaryBuilding:"",
+        relocationBuilding:"",
+        keyContact:"",
+        backupKeyContact:"",
+        remarks:"",
+        dataReviewedBy:"",
+        shiftStartTime:"",
+        isWorkFromHomeAvl:false,
+        eccAccomadationNeeded:false,
+        transportRequirements:""
             },
             addUserOpen: false,
             editUserOpen: false,
@@ -143,19 +276,30 @@ export class UsersPage extends React.Component {
         this.setState({ users: users })
     }
 
+    // handleAddUserSubmit = (values, actions) => {
+    //     postUser(values).then(() => {
+    //         getUsers()
+    //             .then(res => {
+    //                 this.setState({
+    //                     users: res,
+    //                     addUserData: { ...this.state.addUserData },
+    //                     addUserOpen: false,
+    //                 })
+    //                 actions.setSubmitting(false)
+    //             })
+    //             .catch(err => console.log(err))
+    //     })
+    // }
+
+
     handleAddUserSubmit = (values, actions) => {
-        postUser(values).then(() => {
-            getUsers()
-                .then(res => {
-                    this.setState({
-                        users: res,
-                        addUserData: { ...this.state.addUserData },
-                        addUserOpen: false,
-                    })
-                    actions.setSubmitting(false)
-                })
-                .catch(err => console.log(err))
+        const newProject = {id:this.state.users.length,...values}
+        this.setState({
+            users:[...this.state.users,newProject],
+            addUserData: { ...this.state.addUserData },
+            addUserOpen: false,
         })
+        actions.setSubmitting(false)
     }
 
     handleAddUserClick = () => {
@@ -165,51 +309,92 @@ export class UsersPage extends React.Component {
         })
     }
 
+    // handleEditUserClick = (row) => {
+    //     console.log(row)
+    //     const id = row.id
+    //     console.log(id)
+    //     getUserById(id)
+    //         .then(res => {
+    //             console.log(res)
+    //             this.setState({
+    //                 editUserOpen: true,
+    //                 editUserId: id,
+    //                 editUserData: { ...this.state.editUserData, ...res },
+    //             })
+    //         })
+    //         .catch(err => console.log(err))
+    // }
+
+
     handleEditUserClick = (row) => {
         console.log(row)
         const id = row.id
         console.log(id)
-        getUserById(id)
-            .then(res => {
-                console.log(res)
-                this.setState({
-                    editUserOpen: true,
-                    editUserId: id,
-                    editUserData: { ...this.state.editUserData, ...res },
-                })
-            })
-            .catch(err => console.log(err))
+
+        const editUser = this.state.users.find(x => x.id === id)
+        console.log(editUser)
+        this.setState({
+            editUserOpen: true,
+            editUserId: id,
+            editUserData:  editUser ,
+        })
+
+        
     }
 
-    handleEditUserSubmit = (values, action) => {
-        putUser(values)
-            .then(() => {
-                getUsers()
-                    .then(res => {
-                        this.setState({
-                            users: res,
-                            editUserOpen: false,
-                        })
-                        action.setSubmitting(false)
-                    })
-                    .catch(err => console.log(err))
-            })
-            .catch(err => console.log(err))
+
+    // handleEditUserSubmit = (values, action) => {
+    //     putUser(values)
+    //         .then(() => {
+    //             getUsers()
+    //                 .then(res => {
+    //                     this.setState({
+    //                         users: res,
+    //                         editUserOpen: false,
+    //                     })
+    //                     action.setSubmitting(false)
+    //                 })
+    //                 .catch(err => console.log(err))
+    //         })
+    //         .catch(err => console.log(err))
+    // }
+
+
+    handleEditUserSubmit = (values, actions) => {
+        console.log(values)
+        const updatedProject = this.state.users.find(x =>x.id === values.id)
+        const newe = {...updatedProject,values}
+        console.log(newe)
+        const ps = this.state.users
+         ps[values.id-1] = values
+        this.setState({
+            users:[...ps],
+            editUserOpen: false,
+            
+        })
+        actions.setSubmitting(false)
     }
+
+    // handleDeleteUserSubmit = (id) => {
+    //     deleteBatchById(id)
+    //         .then(() => {
+    //             getUsers()
+    //                 .then(res => {
+    //                     this.setState({
+    //                         users: res,
+    //                     })
+    //                 })
+    //                 .catch(err => console.log(err))
+    //         })
+    //         .catch(err => console.log(err))
+    // }
+
 
     handleDeleteUserSubmit = (id) => {
-        deleteBatchById(id)
-            .then(() => {
-                getUsers()
-                    .then(res => {
-                        this.setState({
-                            users: res,
-                        })
-                    })
-                    .catch(err => console.log(err))
-            })
-            .catch(err => console.log(err))
+        const users = this.state.users.filter(x => x.id !== id)
+        this.setState({users: users  })
     }
+    
 
     handleCloseClick = (modelType) => {
         if (modelType === 'add user') {

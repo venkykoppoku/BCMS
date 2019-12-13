@@ -10,15 +10,15 @@ import { Paper } from '@material-ui/core'
 
 
 
-export const UserFormSchema = yup.object({
-    email: yup
-        .string()
-        .required('Email Required')
-        .email('Email Not Valid'),
-    password: yup.string().required('Password Required'),
-    roles: yup.array(yup.string()),
-    role: yup.string().required('Role Required'),
-})
+// export const UserFormSchema = yup.object({
+//     email: yup
+//         .string()
+//         .required('Email Required')
+//         .email('Email Not Valid'),
+//     password: yup.string().required('Password Required'),
+//     roles: yup.array(yup.string()),
+//     role: yup.string().required('Role Required'),
+// })
 
 export const respJson = (res, actions) => {
     if (res.ok) {
@@ -56,18 +56,30 @@ export const AddUserForm = (props) => (
             onSubmit={(values, actions) => {
                 props.onSubmit(values, actions)
             }}
-            validationSchema={UserFormSchema}
+           
         >
             <div className="ActivityViewContainer">
                 <Paper>
                     <Form>
-                        <MFTextField name="email" type="text" />
-
-                        <MFTextField name="password" type="text" />
-
-                        <MFTextField name="role" type="text" />
-                        <MFCheckbox name="emailConfirmed" value={true} />
-
+                        <MFTextField name="unit" type="text" />
+                        <MFTextField name="typeOfProject" type="text" />
+                        <MFTextField name="noOfKeyResourcesNeeded" type="number" />
+                        <MFTextField name="noOfPcsRequired" type="number" />
+                        <MFTextField name="projectSpecificSoftwareRequired" type="text" />
+                        <MFTextField name="servicePriority" type="text" />
+                        <MFTextField name="recoveryTimelines" type="text" />
+                        <MFTextField name="primaryLocation" type="text" />
+                        <MFTextField name="relocationLocation" type="text" />
+                        <MFTextField name="primaryBuilding" type="text" />
+                        <MFTextField name="relocationBuilding" type="text" />
+                        <MFTextField name="keyContact" type="text" />
+                        <MFTextField name="backupKeyContact" type="text" />
+                        <MFTextField name="remarks" type="text" />
+                        <MFTextField name="dataReviewedBy" type="text" />
+                        <MFTextField name="shiftStartTime" type="text" />
+                        <MFCheckbox name="isWorkFromHomeAvl" value={true} />
+                        <MFCheckbox name="eccAccomadationNeeded" value={true} />
+                        <MFTextField name="transportRequirements" type="text" />
                         <br />
                         <Button color="primary" variant="contained" type="submit">
                             Submit
